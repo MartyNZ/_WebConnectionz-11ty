@@ -1,0 +1,37 @@
+{
+  "dir": "ltr",
+  "lang": "en-US",
+  "name": "Web Connections Eleventy Starter Template",
+  "short_name": "WebConnect Starter",
+  "scope": "/",
+  "display": "standalone",
+  "start_url": "/",
+  "id":"/",
+  "background_color": "#fdf7f1",
+  "theme_color": "#945922",
+  "description": "Doesn't matter what I put here, its going to be replaced",
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "categories": ["Web Development", "Full Stack development", "JAMStack"],
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+	  {
+      "name": "Contact Us",
+      "url": "/contact/index.html",
+      "description": "Contact us now"
+    }
+  ],
+  "url": "https://webconnectionz.com"
+}

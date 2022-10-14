@@ -1,0 +1,74 @@
+{
+  "name": "webconnectionz-11ty",
+  "version": "0.1.0",
+  "description": "Boilerplate site for scaffolding new projects",
+  "main": "index.html",
+  "scripts": {
+    "prestart": "npm run clean",
+    "prebuild": "npm run clean",
+    "clean": "rimraf public",
+    "start": "run-p dev:* dev:js:legacy",
+    "dev:eleventy": "eleventy --serve",
+    "dev:sass": "sass --watch --embed-source-map src/_scss:public/assets",
+    "build": "run-s build:eleventy build:sass build:js build:js:legacy",
+    "build:eleventy": "eleventy",
+    "build:sass": "sass --no-source-map --style=compressed src/_scss:public/assets",
+    "sass": "sass src/_scss:public/assets",
+    "prelint:html": "npm run build",
+    "lint": "run-s lint:html lint:css lint:js",
+    "lint:html": "pa11y-ci -c .pa11yci.json public/**/*.html",
+    "lint:css": "stylelint src/_scss/**/*.scss --color --formatter verbose",
+    "lint:js": "eslint . --ext .js,.ts",
+    "dev:js": "esbuild src/js/index.js  src/js/multiplicative-math.ts --format=esm --bundle=true --splitting=true --outdir=public/js --watch --sourcemap=inline",
+    "build:js": "esbuild src/js/index.js src/js/multiplicative-math.ts  --format=esm --bundle=true --splitting=true --outdir=public/js --minify=true",
+    "test": "jest",
+    "dev:js:legacy": "webpack --env development --progress -w",
+    "build:js:legacy": "webpack --env production --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartyNZ/_WebConnectionz-11ty"
+  },
+  "author": "Martyn Cook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartyNZ/_WebConnectionz-11ty/issues"
+  },
+  "homepage": "https://github.com/MartyNZ/_WebConnectionz-11ty#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^29.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "babel-jest": "^29.1.2",
+    "babel-loader": "^8.2.5",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.15.10",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.1.2",
+    "npm-run-all": "^4.1.5",
+    "pa11y-ci": "^3.0.1",
+    "rimraf": "^3.0.2",
+    "stylelint": "^14.13.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "ts-jest": "^29.0.3",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "sass": "^1.55.0"
+  },
+  "browserslist": [
+    ">0%",
+    "not dead",
+    "not supports es6-module"
+  ]
+}
