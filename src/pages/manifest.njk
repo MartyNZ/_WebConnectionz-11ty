@@ -1,15 +1,18 @@
+---
+permalink: '/manifest.json'
+---
 {
   "dir": "ltr",
   "lang": "en-US",
-  "name": "Web Connections Eleventy Starter Template",
-  "short_name": "WebConnect Starter",
+  "name": "{{coreData.title}}",
+  "short_name": "{{coreData.shortTitle}}",
   "scope": "/",
   "display": "standalone",
   "start_url": "/",
   "id":"/",
-  "background_color": "#fdf7f1",
-  "theme_color": "#945922",
-  "description": "Doesn't matter what I put here, its going to be replaced",
+  "background_color": "{{coreData.appBgClr}}",
+  "theme_color": "{{coreData.appThemeClr}}",
+  "description": "{{coreData.description}}",
   "orientation": "portrait",
   "prefer_related_applications": false,
   "categories": ["Web Development", "Full Stack development", "JAMStack"],
@@ -33,5 +36,5 @@
       "description": "Contact us now"
     }
   ],
-  "url": "https://webconnectionz.com"
+  "url": "{{coreData.url}}"
 }

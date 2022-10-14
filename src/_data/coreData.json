@@ -1,5 +1,9 @@
 {
-  "siteOwner":"WebConnectionz",
-  "title":"WebConnectionz - Eleventy - Starter",
-  "description":"Boilerplate site for scaffolding new projects utilising Eleventy Static Site Generator"
+  "siteOwner": "WebConnectionz",
+  "title": "WebConnectionz - Eleventy - Starter",
+  "shortTitle": "WC 11ty",
+  "description": "Boilerplate site for scaffolding new projects utilising Eleventy Static Site Generator",
+  "appBgClr": "#fdf7f1",
+  "appThemeClr": "#945922",
+  "url": "https://webconnectionz.com"
  }
