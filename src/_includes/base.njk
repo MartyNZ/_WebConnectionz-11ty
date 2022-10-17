@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title or coreData.title }}</title>
-  <meta name="description" content="{{description or coreData.description}}">
+  <title>{{title or siteSettings.title }}</title>
+  <meta name="description" content="{{description or siteSettings.description}}">
 
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
   <link rel="alternate icon" href="/assets/images/favicon.png" type="image/png" />
@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
 
   <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="{{coreData.appThemeClr}}" />
+  <meta name="theme-color" content="{{siteSettings.appThemeClr}}" />
 
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
@@ -21,14 +21,14 @@
   {% block header %}
     <header><p>This is the header</p></header>
   {% endblock %} 
-   <main role="foo">
+   <main>
     {% block content %}
       {{content|safe}}
     {% endblock %}
   </main>
   <footer>
     {% block footer %}
-      <p>This is the footer</p>
+      {% include 'layouts/footer.njk' %}
     {% endblock %}
   </footer>
   <script src="/js/index.js" type="module"></script>

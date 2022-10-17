@@ -3,11 +3,21 @@
   "version": "0.1.0",
   "description": "Boilerplate site for scaffolding new projects",
   "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartyNZ/_WebConnectionz-11ty"
+  },
+  "author": "Martyn Cook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartyNZ/_WebConnectionz-11ty/issues"
+  },
+  "homepage": "https://github.com/MartyNZ/_WebConnectionz-11ty#readme",
   "scripts": {
     "prestart": "npm run clean",
     "prebuild": "npm run clean",
-    "clean": "rimraf public",
-    "start": "run-p dev:* dev:js:legacy",
+    "clean": "rimraf public src/_scss/_themes.scss",
+    "start": "npm run build:eleventy && run-p dev:*",
     "dev:eleventy": "eleventy --serve",
     "dev:sass": "sass --watch --embed-source-map src/_scss:public/assets",
     "build": "run-s build:eleventy build:sass build:js build:js:legacy",
@@ -19,22 +29,12 @@
     "lint:html": "pa11y-ci -c .pa11yci.json public/**/*.html",
     "lint:css": "stylelint src/_scss/**/*.scss --color --formatter verbose",
     "lint:js": "eslint . --ext .js,.ts",
-    "dev:js": "esbuild src/js/index.js  src/js/multiplicative-math.ts --format=esm --bundle=true --splitting=true --outdir=public/js --watch --sourcemap=inline",
-    "build:js": "esbuild src/js/index.js src/js/multiplicative-math.ts  --format=esm --bundle=true --splitting=true --outdir=public/js --minify=true",
+    "dev:js": "esbuild src/js/index.js --format=esm --bundle=true --splitting=true --outdir=public/js --watch --sourcemap=inline",
+    "build:js": "esbuild src/js/index.js  --format=esm --bundle=true --splitting=true --outdir=public/js --minify=true",
     "test": "jest",
     "dev:js:legacy": "webpack --env development --progress -w",
     "build:js:legacy": "webpack --env production --progress"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MartyNZ/_WebConnectionz-11ty"
-  },
-  "author": "Martyn Cook",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MartyNZ/_WebConnectionz-11ty/issues"
-  },
-  "homepage": "https://github.com/MartyNZ/_WebConnectionz-11ty#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@babel/core": "^7.19.3",

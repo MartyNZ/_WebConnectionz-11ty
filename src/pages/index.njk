@@ -1,9 +1,16 @@
 ---
-extends: base.njk
-title: {{coreData.title}}
-description: {{coreData.description}}
+layout: base.njk
+title: {{siteSettings.title}}
+description: {{siteSettings.description}}
 ---
+{% block header %}
+  <h1>Hello World!</h1>
+{% endblock %}
 
-<h1>Hello World!</h1>
+{% block content %}
+  <h2>{{siteSettings.title}}</h2>
+  <img src="{{siteSettings.logoUrl}}" width="30%"/>
+{% endblock %}
 
-<h2>{{coreData.description}}</h2>
+{% block footer %}
+{% endblock %}

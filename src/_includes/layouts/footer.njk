@@ -1,0 +1,53 @@
+<footer id="footer" class="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="{{siteSettings.logoUrl}}" alt="">
+            <span>{{siteSettings.title}}</span>
+          </a>
+          <p>{{siteSettings.description}}</p>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            {{siteSettings.address}} <br>
+          {{siteSettings.addressExt}}<br>
+          {{siteSettings.city}},&nbsp;&nbsp;{{siteSettings.postcode}} <br><br>
+          <strong>Phone: </strong>
+          {% set location = siteSettings.primaryLocation %}
+          {% for number in location.phoneNumbers %}
+            <a href="tel:+{{number.number}}">+64 {{number.label}}</a><br>
+          {% endfor %}
+          <strong>Email: </strong><a href="mailto:{{siteSettings.email}}"> {{siteSettings.email}}</a><br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+   
+  <div class="footer-legal">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright {% getYear %} <strong><span>{{siteSettings.siteOwner}}</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Developed by <a href="https:/webconnectionz.com/" target="_blank">Web Connectionz</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

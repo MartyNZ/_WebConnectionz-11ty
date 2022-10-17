@@ -1,1 +1,8 @@
-@import 'theming'
+@import 'themes';
+
+// Base
+@import 'base/reset';
+
+// Layouts
+@import 'layouts/footer';
+@import 'layouts/header';

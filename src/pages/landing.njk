@@ -1,4 +1,5 @@
 ---
+layout: base.njk
 title: WebConnectionz Eleventy Sanity Starter Template
 description: Doesn't matter what I put here, its going to be replaced
 extends: base.njk
@@ -8,7 +9,6 @@ extends: base.njk
 
 <p>This is the landing page for {{title}}.
 This will become the template for generating all landing pages within the site.</p>
-{% block scripts %}
-  <script src="/js/multiplicative-math.js" type="module"></script>
-  <script src="/js/multiplicative-math.legacy.js" nomodule></script>
+{% block footer %}
+  <h1>This is the landing page footer.</h1>
 {% endblock %}
