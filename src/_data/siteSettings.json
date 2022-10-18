@@ -5,7 +5,8 @@
   "clrDefault":"#444444",
   "clrPrimary":"#4154f1",
   "clrSecondary":"#012970",
-  "description":"A 'just add water' professional website template: A Bootstrap 5 theme with custom CMS. Developed using Nunjucks and generated with Eleventy SSG. Published to the Netlify edge network. Direct contact with the developer. Add features and customisations as your requirements change and budget allows. Bring your own content, and imagination, that's all you need!","email":"contact@webconnectionz.com",
+  "description":"A 'starter' website template: All the scaffolding required to start your next web development project. Tooling includes Sass, Vanilla JavaScript, Eleventy SSG.",
+  "email":"contact@webconnectionz.com",
   "logoUrl":"/assets/images/logo.svg",
   "postcode":"7481",
   "primaryLocation":{
@@ -19,5 +20,5 @@
     ],
   "socialLinks":null},
   "siteOwner":"Web Connectionz",
-  "title":"Web Connectionz <==> 11ty"
+  "title":"Web Connectionz 11ty Starter Template"
 }

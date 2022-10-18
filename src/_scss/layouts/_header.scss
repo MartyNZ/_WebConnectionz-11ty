@@ -1,6 +1,4 @@
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+@use '../themes' as *;
 .header {
   transition: all 0.5s;
   z-index: 997;
@@ -24,7 +22,7 @@
       font-weight: 700;
       letter-spacing: 1px;
       color: $secondary;
-      font-family: $font-primary;
+      font-family: $ff-base;
       margin-top: 3px;
     }
 

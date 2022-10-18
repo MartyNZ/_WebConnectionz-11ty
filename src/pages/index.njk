@@ -1,16 +1,11 @@
 ---
 layout: base.njk
-title: {{siteSettings.title}}
+title: Web Connectionz 11ty Starter Template
 description: {{siteSettings.description}}
 ---
-{% block header %}
-  <h1>Hello World!</h1>
-{% endblock %}
-
 {% block content %}
-  <h2>{{siteSettings.title}}</h2>
-  <img src="{{siteSettings.logoUrl}}" width="30%"/>
-{% endblock %}
-
-{% block footer %}
+  <div class="container">
+    <h2 class="text-center">{{siteSettings.title}}</h2>
+    <img src="{{siteSettings.logoUrl}}" alt="Logo of {{siteSettings.title}}" width="30%"/> 
+  </div>
 {% endblock %}

@@ -1,8 +1,6 @@
-@import 'themes';
-
-// Base
-@import 'base/reset';
-
-// Layouts
-@import 'layouts/footer';
-@import 'layouts/header';
+@use 'themes';
+@use 'abstracts';
+@use 'components'; 
+@use 'base';
+@use 'layouts';
+@use 'utilities';

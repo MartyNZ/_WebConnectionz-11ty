@@ -1,4 +1,3 @@
-
 const fs = require("fs");
 
 const outputFile = "./src/_scss/_themes.scss";
@@ -12,6 +11,7 @@ module.exports = function(eleventyConfig){
   } else {
     eleventyConfig.ignores.add('src/pages/contact.njk');
     eleventyConfig.ignores.add('src/pages/index.njk');
+    eleventyConfig.ignores.add('src/pages/landing.njk');
     eleventyConfig.ignores.add('src/pages/message-received.njk');
     eleventyConfig.ignores.add('src/pages/portfolio-details.njk');
     eleventyConfig.ignores.add('src/pages/service-worker.njk');

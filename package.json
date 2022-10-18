@@ -16,7 +16,7 @@
   "scripts": {
     "prestart": "npm run clean",
     "prebuild": "npm run clean",
-    "clean": "rimraf public src/_scss/_themes.scss",
+    "clean": "rimraf public src/_scss/_themes.scss && npm run build:eleventy",
     "start": "npm run build:eleventy && run-p dev:*",
     "dev:eleventy": "eleventy --serve",
     "dev:sass": "sass --watch --embed-source-map src/_scss:public/assets",
@@ -29,8 +29,8 @@
     "lint:html": "pa11y-ci -c .pa11yci.json public/**/*.html",
     "lint:css": "stylelint src/_scss/**/*.scss --color --formatter verbose",
     "lint:js": "eslint . --ext .js,.ts",
-    "dev:js": "esbuild src/js/index.js --format=esm --bundle=true --splitting=true --outdir=public/js --watch --sourcemap=inline",
-    "build:js": "esbuild src/js/index.js  --format=esm --bundle=true --splitting=true --outdir=public/js --minify=true",
+    "dev:js": "esbuild src/public/assets/js/index.js --format=esm --bundle=true --splitting=true --outdir=public/assets/js --watch --sourcemap=inline",
+    "build:js": "esbuild src/public/assets/js/index.js  --format=esm --bundle=true --splitting=true --outdir=public/assets/js --minify=true",
     "test": "jest",
     "dev:js:legacy": "webpack --env development --progress -w",
     "build:js:legacy": "webpack --env production --progress"

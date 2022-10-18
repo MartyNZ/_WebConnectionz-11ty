@@ -1,39 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title or siteSettings.title }}</title>
-  <meta name="description" content="{{description or siteSettings.description}}">
-
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="/assets/images/favicon.png" type="image/png" />
-  <link rel="mask-icon" href="/assets/images/favicon.svg" />
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-
-  <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="{{siteSettings.appThemeClr}}" />
-
-  <link rel="stylesheet" href="/assets/styles.css">
-</head>
-<body>
-  {% block header %}
-    <header><p>This is the header</p></header>
-  {% endblock %} 
-   <main>
-    {% block content %}
-      {{content|safe}}
+  {% include 'head.njk' %}
+  <body>
+    {% block header %}
+      {% include 'layouts/header.njk' %}
     {% endblock %}
-  </main>
-  <footer>
+    
+     
+    <main>
+      {% block content %}
+        {{content|safe}}
+      {% endblock %}
+    </main>
+
+
     {% block footer %}
       {% include 'layouts/footer.njk' %}
     {% endblock %}
-  </footer>
-  <script src="/js/index.js" type="module"></script>
-  <script src="/js/index.legacy.js" nomodule></script>
-  {% block scripts %}{% endblock %}
-  <script>navigator.serviceWorker.register('/service-worker.js');</script>
-</body>
+
+    {% include 'scripts.njk' -%}
+  </body>
 </html>

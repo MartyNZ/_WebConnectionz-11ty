@@ -12,7 +12,7 @@ const getEntryPoints = (directory) => fs.readdirSync(path.join(__dirname, direct
 
   module.exports = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-    entry: () => getEntryPoints('src/js'),
+    entry: () => getEntryPoints('src/public/assets/js'),
     module: {
       rules: [
         {
@@ -35,6 +35,6 @@ const getEntryPoints = (directory) => fs.readdirSync(path.join(__dirname, direct
     },
     output: {
       filename: '[name].legacy.js',
-      path: path.resolve(__dirname, 'public/js'),
+      path: path.resolve(__dirname, 'public/assets/js'),
     },
   };

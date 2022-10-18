@@ -1,12 +1,10 @@
 // Fonts
-$font-default: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-$font-primary: Roboto, sans-serif;
-$font-secondary: 'Open Sans', sans-serif;
+$ff-base: 'Lucida Sans', sans-serif;
+$ff-accent: "Times New Roman", serif;
 
 :root {
-  --font-default: #{$font-default};
-  --font-primary: #{$font-primary};
-  --font-secondary: #{$font-secondary};
+  --ff-base: #{$ff-base};
+  --ff-accent: #{$ff-accent};
     
   scroll-behavior: smooth;
 }

@@ -4,15 +4,15 @@ permalink: '/manifest.json'
 {
   "dir": "ltr",
   "lang": "en-US",
-  "name": "{{coreData.title}}",
-  "short_name": "{{coreData.shortTitle}}",
+  "name": "{{siteSettings.title}}",
+  "short_name": "{{siteSettings.shortTitle}}",
   "scope": "/",
   "display": "standalone",
   "start_url": "/",
   "id":"/",
-  "background_color": "{{coreData.appBgClr}}",
-  "theme_color": "{{coreData.appThemeClr}}",
-  "description": "{{coreData.description}}",
+  "background_color": "#fafafa",
+  "theme_color": "{{siteSettings.clrPrimary}}",
+  "description": "{{siteSettings.description}}",
   "orientation": "portrait",
   "prefer_related_applications": false,
   "categories": ["Web Development", "Full Stack development", "JAMStack"],
@@ -36,5 +36,5 @@ permalink: '/manifest.json'
       "description": "Contact us now"
     }
   ],
-  "url": "{{coreData.url}}"
+  "url": "{{siteSettings.url}}"
 }
