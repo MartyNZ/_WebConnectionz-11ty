@@ -1,3 +1,25 @@
-<section>
-  <h1>Contact Page</h1>
-</section>
+<form name="contact" netlify action="message-received.html" class="email-form">
+  <div class="">
+
+    <div class="">
+      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+
+    <div class="">
+      <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="">
+      <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+    </div>
+
+    <div class="">
+      <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+    </div>
+
+    <div class="text-center">
+      <button type="submit">Send Message</button>
+    </div>
+
+  </div>
+</form>

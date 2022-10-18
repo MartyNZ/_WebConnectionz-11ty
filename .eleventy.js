@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig){
   }
 
   eleventyConfig.addWatchTarget('src/_scss/');
-  eleventyConfig.addWatchTarget('src/js/');
+  eleventyConfig.addWatchTarget('src/public/assets/js/');
 
   eleventyConfig.addPassthroughCopy({ 'src/public': '/' });
 

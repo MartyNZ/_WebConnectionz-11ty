@@ -1,6 +1,6 @@
 {
   "name": "webconnectionz-11ty",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "description": "Boilerplate site for scaffolding new projects",
   "main": "index.html",
   "repository": {
@@ -17,7 +17,7 @@
     "prestart": "npm run clean",
     "prebuild": "npm run clean",
     "clean": "rimraf public src/_scss/_themes.scss && npm run build:eleventy",
-    "start": "npm run build:eleventy && run-p dev:*",
+    "start": "npm run build:eleventy && run-p dev:* dev:js:legacy",
     "dev:eleventy": "eleventy --serve",
     "dev:sass": "sass --watch --embed-source-map src/_scss:public/assets",
     "build": "run-s build:eleventy build:sass build:js build:js:legacy",
