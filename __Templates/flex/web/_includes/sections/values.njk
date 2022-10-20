@@ -1,0 +1,19 @@
+<section id="values" class="values">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>{{values.title}}</h2>
+      <p>{{values.summary}}</p>
+    </header>
+
+    <div class="row">
+
+      {% set items = values.value %}
+      {% include 'components/value-item.njk' %}
+
+    </div>
+
+  </div>
+
+</section>

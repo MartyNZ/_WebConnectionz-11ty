@@ -1,0 +1,10 @@
+{% for item in items %}
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="service-box {{ clr.next() }}">
+    <i class="{{item.icon}}"></i>
+    <h3>{{item.title}}</h3>
+    <p>{{item.summary}}</p>
+    <a href="{{item.lnkUrl}}" class="read-more"><span>{{item.lnkTxt}}</span> <i class="bi bi-arrow-right"></i></a>
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,54 @@
+---
+layout: base.njk
+pagination:
+  data: portfolio.portfolioItems
+  size: 1
+  alias: item
+eleventyComputed:
+  title: {{item.title}}
+permalink: "/portfolio/{{item.title|slug}}/index.html"
+eleventyNavigation:
+  key:{{item.title}}
+---
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <h2>{{item.title}}</h2>
+    <div class="row gy-4">
+
+      <div class="col-lg-8">
+        
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+
+            {% set images = item.images %}
+            {% for image in images %}
+            <div class="swiper-slide">
+              <img src="{{image.imgUrl}}" alt="">
+            </div>
+            {% endfor %}
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li><strong>Category</strong>: {{item.category}}</li>
+            <li><strong>Client</strong>: {{item.client}}</li>
+            <li><strong>Project date</strong>: {{item.projectDate}}</li>
+            <li><strong>Project URL</strong>: <a href="{{item.projectUrl}}">{{item.projectUrl}}</a></li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h2>{{item.subtitle}}</h2>
+          <p>{{item.description|richtext|safe}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

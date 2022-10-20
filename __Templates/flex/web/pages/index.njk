@@ -1,0 +1,31 @@
+---
+layout: base.njk
+permalink: '/index.html'
+eleventyComputed:
+  title: 'Welcome to {{ title or siteSettings.title }}'
+  eleventyNavigation:
+  key: home
+  order: 0
+---
+
+{% include 'sections/about.njk' %}
+
+{% include 'sections/values.njk' %}
+
+{% include 'sections/counts.njk' %}
+
+{% include 'sections/features.njk' %}
+
+{% include 'sections/services.njk' %}
+
+{% include 'sections/pricing.njk' %}
+
+{% include 'sections/faqs.njk' %}
+
+{% include 'sections/portfolio.njk' %}
+
+{% include 'sections/team.njk' %}
+
+{% include 'sections/testimonials.njk' %}
+
+{% include 'sections/clientGallery.njk' %}

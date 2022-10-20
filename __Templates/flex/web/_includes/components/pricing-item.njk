@@ -1,0 +1,14 @@
+{% for item in items %}
+<div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+  <div class="box">
+    {% if item.featured %}
+      <span class="featured">Featured</span>
+    {% endif %}
+    <h3 style="color: {{item.colour}}">{{item.title}}</h3>
+    <div class="price"><sup>$</sup>{{item.price}}<span> / mo</span></div>
+    <img src="{{item.imgUrl}}" class="img-fluid" alt="">
+    <p>{{item.details|richtext|safe}}</p>
+    <a href="#" class="btn-buy">Buy Now</a>
+  </div>
+</div>
+{% endfor %}

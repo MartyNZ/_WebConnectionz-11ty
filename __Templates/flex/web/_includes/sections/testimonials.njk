@@ -1,0 +1,23 @@
+<section id="testimonials" class="testimonials">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>{{testimonials.title}}</h2>
+      <p>{{testimonials.subtitle}}</p>
+    </header>
+
+    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+
+        {% set items = testimonials.testimonial %}
+
+        {% include 'components/testimonial-item.njk' %}
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section>

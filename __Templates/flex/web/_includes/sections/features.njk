@@ -1,0 +1,113 @@
+<section id="features" class="features">
+
+  <div class="container" data-aos="fade-up">
+    {% set items = features.feature%}
+    <header class="section-header">
+      <h2>{{features.title}}</h2>
+      <p>{{features.headline}}</p>
+    </header>
+
+    <!-- layout One -->
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="{{features.images[0].url}}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+          <div class="row align-self-center gy-4">
+            {% for item in items %}
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>{{item.title}}</h3>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div> <!-- / row -->
+    <!-- / layout One -->
+
+    <!-- layout Two -->
+      <!-- Feature Tabs -->
+      <div class="row feture-tabs" data-aos="fade-up">
+        <div class="col-lg-6">
+          <h3>{{features.headline}}{{features.headline}}</h3>
+
+          <!-- Tabs -->
+          <ul class="nav nav-pills mb-3">
+            {% for item in items %}
+            {% if (loop.index <=3 ) %}
+            <li>
+              {% set idx = loop.index %}
+              {% if idx == 1 %}
+              <a class="nav-link active" data-bs-toggle="pill" href="#tab{{loop.index}}">{{item.title}}</a>
+              {% else %}
+              <a class="nav-link" data-bs-toggle="pill" href="#tab{{loop.index}}">{{item.title}}</a>
+              {% endif %}
+            </li>
+            {% endif %}
+            {% endfor %}
+            
+          </ul><!-- End Tabs -->
+
+          <!-- Tab Content -->
+          <div class="tab-content">
+            {% for item in items %}
+              {% set idx = loop.index %}
+              {% if idx == 1 %}
+              <div class="tab-pane fade show active" id="tab{{loop.index}}">
+              {% else %}
+              <div class="tab-pane fade show" id="tab{{loop.index}}">
+              {% endif %}
+              <div class="align-items-center mb-2">
+              {{ item.description|richtext|safe }}
+              </div>
+            </div><!-- End Tab Content -->
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+          <img src="{{features.images[1].url}}" class="img-fluid" alt="">
+        </div>
+
+      </div><!-- End Feature Tabs -->
+    <!-- / layout Two -->
+
+    <!-- layout Three -->
+      <!-- Feature Icons -->
+      <div class="row feature-icons" data-aos="fade-up">
+        <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
+
+        <div class="row">
+
+          <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="{{features.images[2].url}}" class="img-fluid p-4" alt="">
+          </div>
+
+          <div class="col-xl-8 d-flex content">
+            <div class="row align-self-center gy-4">
+              {% set items = features.feature %}
+              {% for item in items%}
+              <div class="col-md-6 icon-box" data-aos="fade-up">
+                <i class="{{item.icon}}"></i>
+                <div>
+                  <h4>{{item.title}}</h4>
+                  <p>{{item.summary}}</p>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- End Feature Icons -->
+    <!-- / layout Three -->
+
+  </div>
+
+</section>

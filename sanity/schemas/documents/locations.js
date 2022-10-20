@@ -46,6 +46,20 @@ export default {
         ),
     },
     {
+      name:'socialConnections',
+      title:'Social Connections',
+      type:'array',
+      of:[        
+        {type:'discord'},
+        {type:'facebook'},
+        {type:'github'},
+        {type:'linkedin'},
+        {type:'instagram'},
+        {type:'slack'},
+        {type:'twitter'},
+      ]
+    },
+    {
       name: 'description',
       title: 'description',
       type: 'portableText'
