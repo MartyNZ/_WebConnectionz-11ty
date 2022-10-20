@@ -1,9 +1,13 @@
+@use 'sass:color' as *;
+@use '../themes' as *;
+
 $colors: (
+  
   neutral: (
-    100: #fff,
-    900: #1f3049
+    100: adjust($clr-default, $lightness:70%),
+    900: adjust($clr-default, $lightness:-70%)
   ),
   primary: (
-    400: #0066ff
+    400: $clr-primary
   ),
 );

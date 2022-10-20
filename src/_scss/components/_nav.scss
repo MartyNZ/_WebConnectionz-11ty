@@ -1,7 +1,7 @@
 @use '../themes' as *;
 @use '../abstracts' as *;
 
-.navbar {
+.primary-navigation {
   padding: 0;
 
   ul {
@@ -24,7 +24,7 @@
     font-family: $ff-base;
     font-size: 16px; 
     font-weight: 700;
-    color: lighten($secondary, 5);
+    color: lighten($clr-secondary, 5);
     white-space: nowrap;
     transition: 0.3s;
 
@@ -36,18 +36,18 @@
   }
 
   a:hover, .active, .active:focus, li:hover > a  {
-    color: $primary;
+    color: $clr-primary;
   }
 
   .getstarted, .getstarted:focus {
-    background: $primary;
+    background: $clr-primary;
     padding: 8px 20px;
     margin-left: 30px;
     border-radius: 4px;
     color: #fff;
     &:hover {
       color: #fff;
-      background: lighten($primary, 5);
+      background: lighten($clr-primary, 5);
     }
   }
 
@@ -83,7 +83,7 @@
       }
 
       a:hover, .active:hover, li:hover > a {
-        color: $primary;
+        color: $clr-primary;
       }
 
     }
@@ -128,7 +128,7 @@
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: $secondary;
+  color: $clr-secondary;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -159,7 +159,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(darken($secondary, 10), 0.9);
+  background: rgba(darken($clr-secondary, 10), 0.9);
   transition: 0.3s;
 
   .mobile-nav-toggle {
@@ -185,11 +185,11 @@
   a, a:focus {
     padding: 10px 20px;
     font-size: 15px; 
-    color: $secondary;
+    color: $clr-secondary;
   }
 
   a:hover, .active, li:hover > a  {
-    color: $primary;
+    color: $clr-primary;
   }
 
   .getstarted, .getstarted:focus {
@@ -222,7 +222,7 @@
       }
 
       a:hover, .active:hover, li:hover > a {
-        color: $primary;
+        color: $clr-primary;
       }
 
     }

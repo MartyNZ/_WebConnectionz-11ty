@@ -16,6 +16,14 @@
     background-color: clr(neutral, 100);
   }
 
+  &[data-type="outline"] {
+    --outline-size: 1px;
+    color: clr(primary, 400);
+    background-color: clr(neutral, 100);
+    outline:var(--outline-size) solid clr(primary, 400);
+    outline-offset:calc(var(--outline-size)*-1);
+  }
+
   &:hover,
   &:focus {
     color: clr(neutral,100);

@@ -48,3 +48,19 @@
     }
   }
 }
+
+.mx-auto {
+  margin-inline:auto;
+}
+
+.push-right {
+  margin-left:auto;
+}
+
+.hero {
+  padding-block: $hero-padding;
+}
+
+.section {
+  padding-block: $section-padding;
+}

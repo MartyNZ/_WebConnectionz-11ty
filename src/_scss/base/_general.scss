@@ -7,7 +7,7 @@ body {
   font-family: $ff-base;
   color: clr(neutral,900);
   background-color: clr(neutral,100);
-  text-align: center;
+  line-height:1.5rem
 }
 
 .page-title {
@@ -17,12 +17,12 @@ body {
 }
 
 a {
-  color: $primary;
+  color: $clr-primary;
   text-decoration: none;
 }
 
 a:hover {
-  color: lighten($primary, 10);
+  color: lighten($clr-primary, 10);
   text-decoration: none;
 }
 
@@ -47,7 +47,7 @@ section {
     letter-spacing: 1px;
     font-weight: 700;
     margin: 0;
-    color: $primary;
+    color: $clr-primary;
     text-transform: uppercase;
   }
 
@@ -57,7 +57,7 @@ section {
     font-size: 38px;
     line-height: 42px;
     font-weight: 700;
-    color: $secondary;
+    color: $clr-secondary;
   }
 
   @media (max-width: 768px) {
@@ -73,7 +73,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: $secondary;
+  background: $clr-secondary;
   min-height: 40px;
   margin-top: 82px;
   color: #fff;
@@ -110,7 +110,7 @@ section {
     li + li::before {
       display: inline-block;
       padding-right: 10px;
-      color: lighten($primary, 15);;
+      color: lighten($clr-primary, 15);;
       content: "/";
     }
   }
@@ -126,7 +126,7 @@ section {
   right:15px;
   bottom: 15px;
   z-index: 99999;
-  background: $primary;
+  background: $clr-primary;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -139,7 +139,7 @@ section {
   }
 
   &:hover  {
-    background: lighten($primary, 8);
+    background: lighten($clr-primary, 8);
     color: #fff;
   }
 

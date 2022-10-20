@@ -1,18 +1,26 @@
+// Colors
+$clr-default: #222222;
+$clr-primary: #2E004F;
+$clr-secondary: #EBEAEF;
+
 // Fonts
 $ff-base: 'Lucida Sans', sans-serif;
 $ff-accent: "Times New Roman", serif;
 
 :root {
+
+  --clr-default: #{$clr-default};
+  --clr-primary: #{$clr-primary};
+  --clr-secondary: #{$clr-secondary};
+
   --ff-base: #{$ff-base};
   --ff-accent: #{$ff-accent};
     
   scroll-behavior: smooth;
 }
 
-// Colors
-$default: #444444;
-$primary: #4154f1;
-$secondary: #012970;
+$clr-dark:darken($clr-default,65);
+$clr-light:lighten($clr-default,65);
 
 // General Colors
 $red: #dc3545;

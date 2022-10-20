@@ -1,14 +1,14 @@
 @use '../themes' as *;
 
 .footer {
-  background: lighten($secondary, 76);
+  background-color: $clr-dark;
   padding: 0 0 30px 0;
   font-size: 14px;
 
-  .footer-newsletter {
+  &-newsletter {
     padding: 50px 0;
-    background: lighten($secondary, 76);
-    border-top: 1px solid lighten($secondary, 72);
+    background: lighten($clr-secondary, 76);
+    border-top: 1px solid lighten($clr-secondary, 72);
 
     h4 {
       font-size: 24px;
@@ -16,7 +16,7 @@
       padding: 0;
       line-height: 1;
       font-weight: 700;
-      color: $secondary;
+      color: $clr-secondary;
     }
 
     form {
@@ -25,7 +25,7 @@
       padding: 6px 10px;
       position: relative;
       border-radius: 4px;
-      border: 1px solid lighten($secondary, 72);
+      border: 1px solid lighten($clr-secondary, 72);
 
       input[type="email"] {
         border: 0;
@@ -42,22 +42,22 @@
         font-size: 16px;
         padding: 0 30px;
         margin: 3px;
-        background: $primary;
+        background: $clr-primary;
         color: $white;
         transition: 0.3s;
         border-radius: 4px;
         &:hover {
-          background: lighten($primary, 5);
+          background: lighten($clr-primary, 5);
         }
       }
     }
   }
 
-  .footer-top {
-    background: lighten($secondary, 78);
+  &-top {
+    background: lighten($clr-secondary, 74);
     background-size: contain;
-    border-top: 1px solid lighten($secondary, 72);
-    border-bottom: 1px solid lighten($secondary, 72);
+    border-top: 1px solid lighten($clr-secondary, 70);
+    border-bottom: 1px solid lighten($clr-secondary, 70);
     padding: 60px 0 30px 0;
 
     @media (max-width: 992px) {
@@ -78,7 +78,7 @@
           font-size: 30px;
           font-weight: 700;
           letter-spacing: 1px;
-          color: $secondary;
+          color: $clr-secondary;
           font-family: $ff-base;
           margin-top: 3px;
         }
@@ -97,12 +97,12 @@
       a {
         font-size: 20px;
         display: inline-block;
-        color: rgba($secondary, .5);
+        color: rgba($clr-secondary, .5);
         line-height: 0;
         margin-right: 10px;
         transition: 0.3s;
         &:hover {
-          color: rgba($secondary,  1);
+          color: rgba($clr-secondary,  1);
         }
       }
     }
@@ -110,7 +110,7 @@
     h4 {
       font-size: 16px;
       font-weight: bold;
-      color: $secondary;
+      color: $clr-secondary;
       text-transform: uppercase;
       position: relative;
       padding-bottom: 12px;
@@ -125,7 +125,7 @@
 
         i {
           padding-right: 2px;
-          color: lighten($primary, 30);
+          color: lighten($clr-primary, 30);
           font-size: 12px;
           line-height: 0;
         }
@@ -140,12 +140,12 @@
         }
 
         a {
-          color: lighten($secondary, 5);
+          color: lighten($clr-secondary, 5);
           transition: 0.3s;
           display: inline-block;
           line-height: 1;
           &:hover {
-            color: $primary;
+            color: $clr-primary;
           }
         }
       }
@@ -159,16 +159,21 @@
 
   }
 
-  .copyright {
-    text-align: center;
-    padding-top: 30px;
-    color: $secondary;
-  }
+  &-legal {
+    margin-bottom: 0;
+    padding:.375rem;
 
-  .credits {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 13px;
-    color: $secondary;
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      color: $clr-default;
+    }
+  
+    .credits {
+      padding-top: 10px;
+      text-align: center;
+      font-size: 13px;
+      color: $clr-default;
+    }
   }
 }
