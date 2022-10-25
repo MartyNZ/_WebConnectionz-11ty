@@ -4,8 +4,8 @@ export default {
   type:'document',
   fieldsets:[
     {
-      name:'siteColours',
-      title:'Site Colours',
+      name:'siteTheme',
+      title:'Site Theme',
       options:{columns:2,collapsible:true}
     }
   ],
@@ -32,23 +32,37 @@ export default {
       type: 'string'
     },
     {
+      name:'baseFont',
+      title:'Base Font',
+      type:'string',
+      description:'This font will be use for all top level headers and page text.',
+      fieldset:'siteTheme'
+    },
+    {
+      name:'accentFont',
+      title:'Accent Font',
+      type:'string',
+      description:'This font will be use to show emphasis on lower level headers and text emphahsis.',
+      fieldset:'siteTheme'
+    },
+    {
       name:'clrDefault',
       title:'Default Colour',
       type:'color',
-      fieldset:'siteColours',
+      fieldset:'siteTheme',
       initialValue:'#444444'
     },
     {
       name: 'clrPrimary',
       title: 'Primary Colour',
       type: 'color',
-      fieldset:'siteColours'
+      fieldset:'siteTheme'
     },
     {
       name: 'clrSecondary',
       title: 'Secondary Colour',
       type: 'color',
-      fieldset:'siteColours'
+      fieldset:'siteTheme'
     },
     {
       name:'socialConnections',
