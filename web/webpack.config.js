@@ -19,17 +19,11 @@ const getEntryPoints = (directory) => fs.readdirSync(path.join(__dirname, direct
           test: /\.(j|t)s$/,
           use: 'babel-loader',
           exclude: /node_modules/,
-        },
-        {
-          test: /\.ts$/,
-          use: 'ts-loader',
-          exclude: /node_modules/,
-        },
+        }
       ],
     },
     resolve: {
       extensions: [
-        '.ts',
         '.js',
       ],
     },
